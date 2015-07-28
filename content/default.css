@@ -1,0 +1,27 @@
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    opacity: 1;
+    /*    color: #265a88;*/
+}
+.fa-3x {
+    font-size: 3em;
+}
+.fa-play:before {
+    content: "\f04b";
+}
+.fa-play:hover {
+    content: "\f04b";
+    /*    color: #337ab7;*/
+}
+.fancybox-media {
+    position: relative;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://labs.rampinteractive.co.uk/touchSwipe/demos/Thresholds.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+        <link href="./touchSwipe_files/main.css" type="text/css" rel="stylesheet">
+        
+        <script type="text/javascript" src="./touchSwipe_files/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./touchSwipe_files/prettify.css">
+        <script type="text/javascript" src="./touchSwipe_files/jquery.touchSwipe.js"></script>
+        <script type="text/javascript" src="./touchSwipe_files/main.js"></script>
+        
+        <title>touchSwipe</title>
+    </head>
+    <body>
+		<a href="https://github.com/mattbryson"><img style="position: absolute; top: 0; right: 0; border: 0;" src="./touchSwipe_files/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+		<div class="container">
+			
+			<script id="code_1">
+				$(function() {			
+					$("#test").swipe( {
+						swipe:function(event, direction) {
+							$(this).text("You swiped " + direction);
+						},
+						swipeStatus:function(event, phase) {
+							if (phase=="cancel") {
+								$(this).text("You didnt swipe far enough ");
+							}
+						},
+						threshold:200
+					 });
+				});
+			</script>
+				
+			<script id="code_2">		
+				$(function() {				
+					$("#test2").swipe( {
+						swipe:function(event, direction) {
+							$(this).text("You swiped " + direction );
+						},
+						swipeStatus:function(event, phase) {
+							if (phase=="cancel") {
+								$("#test2").text("Your swipe was too slow ");
+							}
+						},
+						maxTimeThreshold:1000,
+						threshold:null,
+						triggerOnTouchEnd:false
+					});
+				});
+			</script>
+			
+			
+			<script id="code_3">		
+				$(function() {				
+					$("#test3").swipe( {
+						swipe:function(event, direction) {
+							$(this).text("You swiped " + direction );
+						},
+						swipeStatus:function(event, phase, direction, distance, duration, fingers) {
+							
+							$("#test3").text(" Your have swiped " + distance + " px so far");
+							
+							if(distance>200) {
+							    $("#test3").text(" Now swipe back 10px and release to cancel.. distance = " + distance + "px");
+							}
+							
+							if (phase=="cancel") {
+								$("#test3").text(" You cancelled the swipe");
+							}
+						},
+						threshold:200,
+						cancelThreshold:10
+						
+					});
+				});
+			</script>
+			
+			<span class="title"><h2><a href="http://labs.rampinteracitve.co.uk/touchSwipe/">TouchSwipe</a> Demo</h2><h3>to be viewed on touch based devices</h3><h1>Thresholds<span class="navigation_menu pull-right"><select id="menu" class="pull_right"><option value="Basic_swipe.html">Basic swipe</option><option value="Single_swipe.html">Single swipe</option><option value="Any_finger_swipe.html">Any finger swipe</option><option value="Finger_swipe.html">Finger swipe</option><option value="Swipe_status.html">Swipe status</option><option value="Pinch.html">Pinch</option><option value="Pinch_status.html">Pinch status</option><option value="Pinch_and_Swipe.html">Pinch and Swipe</option><option value="Trigger_handlers.html">Trigger handlers</option><option value="Stop_propegation.html">Stop propegation</option><option value="Handlers_and_events.html">Handlers and events</option><option value="Tap_vs_swipe.html">Tap vs swipe</option><option value="Hold.html">Hold</option><option value="Excluded_children.html">Excluded children</option><option value="Page_zoom.html">Page zoom</option><option value="Thresholds.html" selected="">Thresholds</option><option value="Enable_and_destroy.html">Enable and destroy</option><option value="Page_scrolling.html">Page scrolling</option><option value="Options.html">Options</option><option value="Image_gallery_example.html">Image gallery example</option></select></span></h1></span>
+			<h4>property: <span class="properties"><code>threshold</code></span></h4>
+			<p>By setting the <code>threshold</code> you can set how far the user must swipe before it is considered a swipe. <br>Swipe at least 200px</p>
+			
+			<button class="btn btn-small btn-info example_btn">Jump to Example</button>
+			<pre class="prettyprint lang-js prettyprinted" data-src="code_1"><span class="pln">    $</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">      
+      $</span><span class="pun">(</span><span class="str">"#test"</span><span class="pun">).</span><span class="pln">swipe</span><span class="pun">(</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        swipe</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">,</span><span class="pln"> direction</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+          $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">text</span><span class="pun">(</span><span class="str">"You swiped "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> direction</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        swipeStatus</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">,</span><span class="pln"> phase</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+          </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">phase</span><span class="pun">==</span><span class="str">"cancel"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">text</span><span class="pun">(</span><span class="str">"You didnt swipe far enough "</span><span class="pun">);</span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        threshold</span><span class="pun">:</span><span class="lit">200</span><span class="pln">
+       </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+  </span></pre>
+			<span class="navigation"><div class="pagination"><a class="pull-left btn" href="http://labs.rampinteractive.co.uk/touchSwipe/demos/Page_zoom.html">&lt;&lt; Page zoom</a><a class="pull-right btn" href="http://labs.rampinteractive.co.uk/touchSwipe/demos/Enable_and_destroy.html">Enable and destroy &gt;&gt;</a></div><div class="clear"></div></span>
+			
+			<div id="test" class="box">Swipe me for at least 200 px</div>
+			
+			<h4>property: <span class="properties"><code>cancelThreshold</code></span></h4><h4>
+			<p>By setting the <code>cancelThreshold</code> you can set the minimum distance in px that the user needs to swipe back to cancel the current swipe, even if they have passed the main <code>threshold</code></p>
+			
+
+			<pre class="prettyprint lang-js prettyprinted" data-src="code_3"><span class="pln">  
+      $</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">        
+        $</span><span class="pun">(</span><span class="str">"#test3"</span><span class="pun">).</span><span class="pln">swipe</span><span class="pun">(</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+          swipe</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">,</span><span class="pln"> direction</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">text</span><span class="pun">(</span><span class="str">"You swiped "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> direction </span><span class="pun">);</span><span class="pln">
+          </span><span class="pun">},</span><span class="pln">
+          swipeStatus</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">,</span><span class="pln"> phase</span><span class="pun">,</span><span class="pln"> direction</span><span class="pun">,</span><span class="pln"> distance</span><span class="pun">,</span><span class="pln"> duration</span><span class="pun">,</span><span class="pln"> fingers</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            
+            $</span><span class="pun">(</span><span class="str">"#test3"</span><span class="pun">).</span><span class="pln">text</span><span class="pun">(</span><span class="str">" Your have swiped "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> distance </span><span class="pun">+</span><span class="pln"> </span><span class="str">" px so far"</span><span class="pun">);</span><span class="pln">
+            
+            </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">distance</span><span class="pun">&gt;</span><span class="lit">200</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                $</span><span class="pun">(</span><span class="str">"#test3"</span><span class="pun">).</span><span class="pln">text</span><span class="pun">(</span><span class="str">" Now swipe back 10px and release to cancel.. distance = "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> distance </span><span class="pun">+</span><span class="pln"> </span><span class="str">"px"</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+            
+            </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">phase</span><span class="pun">==</span><span class="str">"cancel"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+              $</span><span class="pun">(</span><span class="str">"#test3"</span><span class="pun">).</span><span class="pln">text</span><span class="pun">(</span><span class="str">" You cancelled the swipe"</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+          </span><span class="pun">},</span><span class="pln">
+          threshold</span><span class="pun">:</span><span class="lit">200</span><span class="pun">,</span><span class="pln">
+          cancelThreshold</span><span class="pun">:</span><span class="lit">10</span><span class="pln">
+          
+        </span><span class="pun">});</span><span class="pln">
+      </span><span class="pun">});</span><span class="pln">
+    </span></pre>			
+			<div id="test3" class="box">Swipe me for at least 200 px, then back 10px to cancel</div>
+			
+			</h4><h4>property: <span class="properties"><code>maxTimeThreshold</code></span></h4><h4>
+			<p>By setting the <code>maxTimeThreshold</code> you can set the maximum time the user has to complete the swipe. A swipe LONGER than this is cancelled. This can be useful for ignoring long slow swipes. <br>Swipe in under 500ms</p>
+			
+
+			<pre class="prettyprint lang-js prettyprinted" data-src="code_2"><span class="pln">  
+      $</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">        
+        $</span><span class="pun">(</span><span class="str">"#test2"</span><span class="pun">).</span><span class="pln">swipe</span><span class="pun">(</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+          swipe</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">,</span><span class="pln"> direction</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">text</span><span class="pun">(</span><span class="str">"You swiped "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> direction </span><span class="pun">);</span><span class="pln">
+          </span><span class="pun">},</span><span class="pln">
+          swipeStatus</span><span class="pun">:</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">,</span><span class="pln"> phase</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">phase</span><span class="pun">==</span><span class="str">"cancel"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+              $</span><span class="pun">(</span><span class="str">"#test2"</span><span class="pun">).</span><span class="pln">text</span><span class="pun">(</span><span class="str">"Your swipe was too slow "</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+          </span><span class="pun">},</span><span class="pln">
+          maxTimeThreshold</span><span class="pun">:</span><span class="lit">1000</span><span class="pun">,</span><span class="pln">
+          threshold</span><span class="pun">:</span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+          triggerOnTouchEnd</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+      </span><span class="pun">});</span><span class="pln">
+    </span></pre>			
+			<div id="test2" class="box">Swipe me within 1000 ms</div>
+			
+
+			<span class="navigation"><div class="pagination"><a class="pull-left btn" href="http://labs.rampinteractive.co.uk/touchSwipe/demos/Page_zoom.html">&lt;&lt; Page zoom</a><a class="pull-right btn" href="http://labs.rampinteractive.co.uk/touchSwipe/demos/Enable_and_destroy.html">Enable and destroy &gt;&gt;</a></div><div class="clear"></div></span>
+		</h4></div>
+   
+
+</body></html>

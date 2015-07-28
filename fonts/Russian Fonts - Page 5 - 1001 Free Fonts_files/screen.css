@@ -1,0 +1,1206 @@
+/* site styles */
+html, body
+{
+    margin:					0;
+    padding:				0;
+    font-family:			"Lucida Grande", Helvetica, Arial, "Arial Unicode", sans-serif;
+    font-size:				12px;
+    color:					#444;
+    height:					100%;
+}
+
+body
+{
+    min-width: 980px;
+	background:	#E9E9E9 url("../images/body_bg") repeat;
+}
+
+img
+{
+    border:					none;
+}
+
+a
+{
+    text-decoration:		underline;
+    color:					#333;
+}
+a:hover
+{
+    text-decoration:		none;
+}
+
+.clear
+{
+    clear:					both;
+}
+
+.pageErrors
+{
+    padding:				10px;
+    background-color:		#fff;
+    border: 				2px solid red;
+    width:					521px;
+    float:					left;
+}
+.pageErrors li, .pageSuccess li
+{
+    list-style: 			none;
+    padding: 				0;
+    margin: 				0;
+    font-size:				14px;
+}
+.pageSuccess
+{
+    padding:				10px;
+    background-color:		#fff;
+    border: 				2px solid green;
+    width:					521px;
+    float:					left;
+}
+
+td
+{
+    vertical-align:			top;
+}
+
+/* site specific */
+.mainPageContainer
+{
+    background-color:		#fff;
+    margin-left:			auto;
+    margin-right:			auto;
+    width:					100%;
+    min-width:				800px;
+}
+.pageContainer
+{
+    float:					left;
+}
+.mainPageContent
+{
+    float:					left;
+    width:					100%;
+}
+.toolbarContainer
+{
+    background-color:		#fff;
+    margin-left:			auto;
+    margin-right:			auto;
+    width:					100%;
+    min-width:				800px;
+}
+.pageMainContent
+{
+    min-height:				500px;
+}
+.genericPageTitle h1
+{
+    font-size:				16px;
+}
+.genericPageTitle .contentRight
+{
+    float:					right;
+}
+.genericPageTitle .contentLeft
+{
+    float:					left;
+}
+
+.pageInnerContainer
+{
+    margin:					35px;
+    margin-bottom:			0px;
+    margin-top:				0px;
+}
+
+.pageInnerContainer .headerBar
+{
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.fontPreviewHeader
+{
+    width:					100%;
+    background-color:		#ddd;
+    clear:					both;
+    font-size:				13px;
+}
+.fontPreviewHeaderInner
+{
+    padding:				6px;
+	background-color:		#eeeeee;
+	border: 				1px solid #000000;
+}
+
+.fontPreviewHeader a
+{
+    color:					#000;
+    font-weight:			bold;
+    text-decoration:		none;
+}
+.fontPreviewHeader a:hover
+{
+    text-decoration:		underline;
+}
+
+.fontPreviewImageWrapper
+{
+    height:					92px;
+    clear:					both;
+    cursor:					pointer;
+}
+.fontPreviewImageWrapperWrapper
+{
+	border-left: 				1px solid #000000;
+	border-right: 				1px solid #000000;
+	border-bottom: 				1px solid #000000;
+	padding-top:                                 22px;
+    padding-left:				10px;
+    padding-bottom:				22px;
+}
+
+.fontPreviewImageWrapperDefault
+{
+    height:					92px;
+    clear:					both;
+    cursor:					pointer;
+}
+.fontPreviewImageWrapper .rightSection, .fontPreviewImageWrapperDefault .rightSection
+{
+    float:					right;
+    width:					174px;
+    cursor:					default;
+    height:                                     112%;
+	background-color:		#ffffff;
+    top: -10px;
+    position: relative;
+}
+.fontPreviewImageWrapper .rightSection .downloadButton, .rightSection .donateButton, .fontPreviewImageWrapperDefault .rightSection .downloadButton, .fontPreviewImageWrapper .rightSection .detailsButton, .fontPreviewImageWrapperDefault .rightSection .detailsButton
+{
+    float:					right;
+}
+.fontPreviewImageWrapper .rightSection .downloadButton .downloadButtonElement, .fontPreviewImageWrapperDefault .rightSection .downloadButton .downloadButtonElement
+{
+    border:					1px solid #000000;
+    padding-right:			11px;
+    padding-left:			11px;
+    padding-top:			6px;
+    padding-bottom:			6px;
+    font-weight:			bold;
+    background-color:		#000000;
+    color:					#fff;
+    margin-top:				30px;
+    margin-right:			0px;
+    cursor:					pointer;
+    font-size:              14px;
+}
+.rightSection .donateButton, .rightSection .downloadButtonMain
+{
+    width: 141px;
+    text-align: center;
+}
+.rightSection .donateButton .donateButtonElement
+{
+    border:					1px solid #686868;
+    padding-right:			5px;
+    padding-left:			5px;
+    padding-top:			4px;
+    padding-bottom:			4px;
+    font-weight:			normal;
+    background-color:		#ffffff;
+    margin-top:				5px;
+    margin-right:			0px;
+    cursor:					pointer;
+    font-size: 9px;
+    text-align: center;
+}
+.rightSection .donateButton .donateButtonElement a
+{
+    text-decoration: none;
+    color: #151515;
+}
+.fontPreviewImageWrapper .rightSection .downloadButtonQueueSelected, .fontPreviewImageWrapperDefault .rightSection .downloadButtonQueueSelected
+{
+    border:					1px solid #ccc;
+    padding-right:			11px;
+    padding-left:			11px;
+    padding-top:			6px;
+    padding-bottom:			6px;
+    font-weight:			bold;
+    background-color:				#ccc;
+    color:					#fff;
+    margin-top:				30px;
+    margin-right:			5px;
+    cursor:					pointer;
+}
+.fontPreviewImageWrapper .rightSection .detailsButton .detailsButtonElement, .fontPreviewImageWrapperDefault .rightSection .detailsButton .detailsButtonElement
+{
+    border:					1px solid #777;
+    padding-right:			10px;
+    padding-left:			10px;
+    padding-top:			5px;
+    padding-bottom:			5px;
+    font-weight:			bold;
+    background-color:				#777;
+    color:					#fff;
+    margin-top:				30px;
+    margin-right:			5px;
+    cursor:					pointer;
+}
+.fontPreviewImageWrapper .rightSection .downloadButton .downloadButtonElement:hover, .fontPreviewImageWrapperDefault .rightSection .downloadButton .downloadButtonElement:hover
+{
+    background-color:				#333;
+    border:					1px solid #333;
+}
+.fontPreviewImageWrapper .rightSection .downloadButton .downloadButtonElement a, .fontPreviewImageWrapperDefault .rightSection .downloadButton .downloadButtonElement a
+{
+    color:					#fff;
+    text-decoration:		none;
+}
+.fontPreviewImageWrapper .rightSection .downloadButton .downloadButtonQueueSelected:hover, .fontPreviewImageWrapperDefault .rightSection .downloadButton .downloadButtonQueueSelected:hover
+{
+    background-color:				#333;
+    border:					1px solid #333;
+}
+.fontPreviewImageWrapper .rightSection .downloadButton .downloadButtonQueueSelected a, .fontPreviewImageWrapperDefault .rightSection .downloadButton .downloadButtonQueueSelected a
+{
+    color:					#fff;
+    text-decoration:		none;
+}
+.fontPreviewImageWrapper .rightSection .detailsButton .detailsButtonElement:hover, .fontPreviewImageWrapperDefault .rightSection .detailsButton .detailsButtonElement:hover
+{
+    background-color:				#333;
+    border:					1px solid #333;
+}
+.fontPreviewImageWrapper .rightSection .detailsButton .detailsButtonElement a, .fontPreviewImageWrapperDefault .rightSection .detailsButton .detailsButtonElement a
+{
+    color:					#fff;
+    text-decoration:		none;
+}
+.fontPreviewWrapper
+{
+    margin-bottom:			3px;
+}
+.fontPreviewTitle
+{
+    float:					left;
+}
+
+.rateFontBlock
+{
+    float:					right;
+    margin-right:			3px;
+    width:					90px;
+}
+.rateFontText
+{
+    float:					right;
+    width:					55px;
+    margin-right:			102px;
+    font-size:				13px;
+    padding-top:			2px;
+    text-align:				right;
+    background-color:				#fff;
+    height:					20px;
+    overflow: hidden;
+}
+.rateFontBlock .starsOn, .rateFontBlock .starsOff
+{
+    width:					90px;
+    height:					17px;
+    position:				absolute;
+}
+.rateFontBlock .starsOn
+{
+    z-index:				11;
+    background:				url("../images/stars_on.png") no-repeat bottom left;
+}
+.rateFontBlock .starsOff
+{
+    z-index:				10;
+    background:				url("../images/stars_off.png") no-repeat bottom right;
+}
+
+.categoryBar
+{
+    width:					100%;
+    font-size:				12px;
+    margin-bottom:			20px;
+}
+
+.fb_iframe_widget iframe
+{
+	z-index: 9;
+}
+
+.categoryBarInner
+{
+    border:					1px solid #000000;
+    padding:				12px;
+    background-color:		#eee;
+}
+.letterListing
+{
+    padding-bottom: 12px;
+}
+
+.letterListing .atozTopTitle
+{
+    float:					left;
+    padding-left:			5px;
+    padding-right:			5px;
+    padding-top:			2px;
+    padding-bottom:			2px;
+    font-weight: bold;
+}
+
+.categoryLink
+{
+    width:					97%;
+}
+.letterLink
+{
+    text-align:				center;
+    width:					12px;
+}
+.categoryLink, .letterLink
+{
+    float:					left;
+    padding-left:			5px;
+    padding-right:			5px;
+    padding-top:			2px;
+    padding-bottom:			2px;
+}
+.categoryLink:hover, .letterLink:hover
+{
+    cursor:					pointer;
+    background-color:		#ccc;
+}
+.categoryLink:hover a, .letterLink:hover a
+{
+    color:					#fff;
+    text-decoration:		underline;
+    font-weight:			bold;
+}
+.categoryLink a, .letterLink a
+{
+    text-decoration:		none;
+}
+.categoryLink a:hover, .letterLink a:hover
+{
+    text-decoration:		underline;
+}
+
+.settingsBar
+{
+    width:					100%;
+    background-color:		#eee;
+    font-size:				12px;
+    margin-bottom:			10px;
+    overflow:				hidden;
+}
+
+.mainNavBar
+{
+    width:					100%;
+    font-size:				13px;
+    color:					#ccc;
+    height:					43px;
+    overflow:				hidden;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+	background-color: #EEEEEE;
+}
+.mainNavBar a
+{
+    color:					#000000;
+    text-decoration:		none;
+}
+.mainNavBar a:hover
+{
+    text-decoration:		underline;
+}
+.mainNavBarInner
+{
+	margin-left: auto;
+    margin-right: auto;
+    width: 1008px;
+}
+.mainNavBarInner .navBarLeftLinks
+{
+    float:					left;
+    padding:				10px;
+    padding-top:			13px;
+    padding-left:			18px;
+    padding-right:			18px;
+    position:                           absolute;
+    font-weight: bold;
+}
+
+.toolbarContainerInner
+{
+    margin-bottom:			20px;
+}
+
+/* paging */
+.pagingWrapper
+{
+    float:					right;
+    padding-top:			6px;
+    padding-bottom:			0px;
+}
+.pagingWrapper .pagingLink, .pagingWrapper .pagingLinkOff, .pagingWrapper .pagingLinkSelected
+{
+    float:					left;
+    padding-left:			6px;
+    padding-right:			6px;
+    padding-top:			3px;
+    padding-bottom:			3px;
+    margin-right:			5px;
+}
+.pagingWrapper .pagingLink
+{
+    border:					1px solid #000000;
+    background-color:				#000000;
+    color:					#fff;
+    cursor:					pointer;
+}
+.pagingWrapper .pagingLink:hover
+{
+    background-color:				#fff;
+}
+.pagingWrapper .pagingLinkOff
+{
+    border:					1px solid #ddd;
+    background-color:				#ddd;
+    color:					#fff;
+}
+.pagingWrapper .pagingLinkSelected
+{
+    border:					1px solid #fff;
+    background-color:				#fff;
+}
+.pagingWrapper .pagingLinkSelected a
+{
+    text-decoration:		none;
+    font-weight:			bold;
+    color:					#000000;
+}
+.pagingWrapper .pagingLink a
+{
+    color:					#fff;
+    font-weight:			bold;
+    text-decoration:		none;
+}
+.pagingWrapper .pagingLink:hover a
+{
+    color:					#000;
+}
+.pagingLabelWrapper
+{
+    float:					left;
+    font-size:				13px;
+    padding-top:			10px;
+    font-weight:			bold;
+    padding-right:			12px;
+}
+
+.footer
+{
+    /* background-color:		#fff; */
+    color:					#000;
+    text-align:				center;
+    padding:				16px;
+	/* border-top: 			1px solid #c6c6c6; */
+}
+.footer a
+{
+    color:					#000;
+    text-decoration:		underline;
+}
+.footer a:hover
+{
+    text-decoration:		none;
+}
+
+.pageDetailsLeft
+{
+    width:					100%;
+    display:				block;
+}
+.pageDetailsRight
+{
+    width:					100%;
+    display:				block;
+}
+
+.characterMap
+{
+    float:					left;
+    padding-top:			8px;
+}
+
+.fontArchiveContents
+{
+    float:					left;
+    width:					100%;
+    padding-top:			8px;
+}
+.fontArchiveContents table
+{
+    border-top:				1px solid #000000;
+    border-right:			1px solid #000000;
+    border-left:			1px solid #000000;
+}
+.fontArchiveContents th, .fontArchiveContents td
+{
+    padding:				7px;
+    border-bottom:			1px solid #000000;
+}
+.fontArchiveContents th
+{
+    background-color:				#eeeeee;
+    color:					#666;
+    text-align:				left;
+}
+.fontArchiveContents tr:hover
+{
+    background-color:				#efefef;
+}
+.fontArchiveContents a
+{
+    text-decoration:		none;
+}
+.fontArchiveContents a:hover
+{
+    text-decoration:		underline;
+}
+.userCommentsForm
+{
+    padding-top:			14px;
+}
+.userCommentsForm .formLabel
+{
+    width:					100px;
+    float:					left;
+}
+.userCommentsForm  textarea
+{
+    width:					400px;
+    height:					50px;
+}
+.userCommentsForm  label
+{
+    padding-left:			10px;
+}
+.userCommentsForm  input
+{
+    width:					250px;
+}
+.userCommentsForm  .submitButton
+{
+    width:					130px;
+}
+.userCommentsForm  .userCommentsIntro
+{
+    float:					left;
+    width:					541px;
+    padding-bottom:			20px;
+}
+
+.userCommentsList
+{
+    padding-top:			8px;
+}
+.userCommentsList .commentRight
+{
+    float:					left;
+    display:				block;
+}
+.userCommentsList .commentLeft
+{
+    float:					left;
+    width:					40px;
+    overflow:				hidden;
+    display:				block;
+    font-size:				24px;
+    font-weight:			bold;
+    color:					#bbb;
+}
+.userCommentsList .commentHead
+{
+    color:					#bbb;
+}
+.userCommentsList .commentsWrapper
+{
+    border-bottom:			1px solid #bbb;
+    padding-top:			10px;
+    padding-bottom:			10px;
+}
+.userCommentsList .commentFirst
+{
+    border-top:				1px solid #bbb;
+}
+.userCommentsList .commentBody
+{
+    width:					500px;
+}
+
+/* ads */
+.mainHeaderAds
+{
+    float:					right;
+    text-align:				right;
+    padding-top: 2px;
+}
+.leftPageAds
+{
+    float:					left;
+    padding-right:			20px;
+}
+.rightPageAds
+{
+    float:					left;
+    padding-left:			10px;
+}
+.footerPageAds
+{
+    margin-left:			auto;
+	margin-right:			auto;
+    text-align:				center;
+    padding-top:				14px;
+	padding-bottom:				14px;
+}
+
+/* custom preview area */
+.customPreviewSettings
+{
+    font-size:				14px;
+    margin-right:			auto;
+    margin-left:			auto;
+    text-align:				center;
+    width:					650px;
+}
+.customPreviewSettings .customPreviewTextLabel, .customPreviewSettings .customPreviewSizeSelect, .customPreviewSettings .customPreviewTextColourLabel, .customPreviewSettings .customPreviewTextInput, .customPreviewSettings .customPreviewTextColourPicker, .customPreviewSettings .customPreviewTextSubmit
+{
+    float:					left;
+}
+.customPreviewSettings .customPreviewTextLabel, .customPreviewSettings .customPreviewTextColourLabel
+{
+    padding-top:			2px;
+    padding-right:			5px;
+}
+.customPreviewSettings .customPreviewTextInput, .customPreviewSettings .customPreviewSizeSelect
+{
+    padding-right:			16px;
+}
+.customPreviewSettings .colourPickerBox
+{
+    margin-right:			14px;
+}
+.customPreviewSettings .customPreviewTextInput input
+{
+    width:					120px;
+}
+.customPreviewSettings .customPreviewSizeSelect select
+{
+    padding: 2px;
+}
+
+/* submit font form */
+.submitFontForm
+{
+    padding-left:			30px;
+    padding-top:			20px;
+}
+.submitFontForm label
+{
+    float:					left;
+    width:					200px;
+    padding:				5px;
+}
+.submitFontForm div
+{
+    clear:					right;
+    padding:				5px;
+}
+.submitFontForm input, .submitFontForm select, .submitFontForm textarea
+{
+    width:					400px;
+}
+.submitFontForm textarea
+{
+    height:					100px;
+}
+.submitFontForm .submitButton
+{
+    width:					120px;
+}
+
+/* popup containers (yui) */
+.yui-overlay,.yui-panel-container{visibility:hidden;position:absolute;z-index:2;}.yui-panel{position:relative;}.yui-panel-container form{margin:0;}.mask{z-index:1;display:none;position:absolute;top:0;left:0;right:0;bottom:0;}.mask.block-scrollbars{overflow:auto;}.masked select,.drag select,.hide-select select{_visibility:hidden;}.yui-panel-container select{_visibility:inherit;}.hide-scrollbars,.hide-scrollbars *{overflow:hidden;}.hide-scrollbars select{display:none;}.show-scrollbars{overflow:auto;}.yui-panel-container.show-scrollbars,.yui-tt.show-scrollbars{overflow:visible;}.yui-panel-container.show-scrollbars .underlay,.yui-tt.show-scrollbars .yui-tt-shadow{overflow:auto;}.yui-panel-container.shadow .underlay.yui-force-redraw{padding-bottom:1px;}.yui-effect-fade .underlay,.yui-effect-fade .yui-tt-shadow{display:none;}.yui-tt-shadow{position:absolute;}.yui-override-padding{padding:0!important;}.yui-panel-container .container-close{overflow:hidden;text-indent:-10000em;text-decoration:none;}.yui-overlay.yui-force-redraw,.yui-panel-container.yui-force-redraw{margin-bottom:1px;} .mask{background-color:#000;opacity:.35;filter:alpha(opacity=35);}.popupContainer .yui-panel-container{padding:0 1px;*padding:2px;}.popupContainer .yui-panel{position:relative;left:0;top:0;border-style:solid;border-width:1px 0;border-color:#808080;z-index:1;*border-width:1px;*zoom:1;_zoom:normal;}.popupContainer .yui-panel .hd,.popupContainer .yui-panel .bd,.popupContainer .yui-panel .ft{border-style:solid;border-width:0 1px;border-color:#808080;margin:0 -1px;*margin:0;*border:0;}.popupContainer .yui-panel .hd{border-bottom:solid 1px #ccc;}.popupContainer .yui-panel .bd,.popupContainer .yui-panel .ft{background-color:#F2F2F2;}.popupContainer .yui-panel .hd{padding:0 10px;font-size:93%;line-height:2;*line-height:1.9;font-weight:bold;color:#000;background:url(http://yui.yahooapis.com/2.8.0r4/build/assets/skins/sam/sprite.png) repeat-x 0 -200px;}.popupContainer .yui-panel .bd{padding:10px;}.popupContainer .yui-panel .ft{border-top:solid 1px #808080;padding:5px 10px;font-size:77%;}.popupContainer .container-close{position:absolute;top:5px;right:6px;width:25px;height:15px;background:url(http://yui.yahooapis.com/2.8.0r4/build/assets/skins/sam/sprite.png) no-repeat 0 -300px;cursor:pointer;}.popupContainer .yui-panel-container .underlay{right:-1px;left:-1px;}.popupContainer .yui-panel-container.matte{padding:9px 10px;background-color:#fff;}.popupContainer .yui-panel-container.shadow{_padding:2px 4px 0 2px;}.popupContainer .yui-panel-container.shadow .underlay{position:absolute;top:2px;left:-3px;right:-3px;bottom:-3px;*top:4px;*left:-1px;*right:-1px;*bottom:-1px;_top:0;_left:0;_right:0;_bottom:0;_margin-top:3px;_margin-left:-1px;background-color:#000;opacity:.12;filter:alpha(opacity=12);}.popupContainer .yui-dialog .ft{border-top:none;padding:0 10px 10px 10px;font-size:100%;}.popupContainer .yui-dialog .ft .button-group{display:block;text-align:right;}.popupContainer .yui-dialog .ft button.default{font-weight:bold;}.popupContainer .yui-dialog .ft span.default{border-color:#304369;background-position:0 -1400px;}.popupContainer .yui-dialog .ft span.default .first-child{border-color:#304369;}.popupContainer .yui-dialog .ft span.default button{color:#fff;}.popupContainer .yui-dialog .ft span.yui-button-disabled{background-position:0 -1500px;border-color:#ccc;}.popupContainer .yui-dialog .ft span.yui-button-disabled .first-child{border-color:#ccc;}.popupContainer .yui-dialog .ft span.yui-button-disabled button{color:#a6a6a6;}.popupContainer .yui-simple-dialog .bd .yui-icon{background:url(http://yui.yahooapis.com/2.8.0r4/build/assets/skins/sam/sprite.png) no-repeat 0 0;width:16px;height:16px;margin-right:10px;float:left;}.popupContainer .yui-simple-dialog .bd span.blckicon{background-position:0 -1100px;}.popupContainer .yui-simple-dialog .bd span.alrticon{background-position:0 -1050px;}.popupContainer .yui-simple-dialog .bd span.hlpicon{background-position:0 -1150px;}.popupContainer .yui-simple-dialog .bd span.infoicon{background-position:0 -1200px;}.popupContainer .yui-simple-dialog .bd span.warnicon{background-position:0 -1900px;}.popupContainer .yui-simple-dialog .bd span.tipicon{background-position:0 -1250px;}.popupContainer .yui-tt .bd{position:relative;top:0;left:0;z-index:1;color:#000;padding:2px 5px;border-color:#D4C237 #A6982B #A6982B #A6982B;border-width:1px;border-style:solid;background-color:#FFEE69;}.popupContainer .yui-tt.show-scrollbars .bd{overflow:auto;}.popupContainer .yui-tt-shadow{top:2px;right:-3px;left:-3px;bottom:-3px;background-color:#000;}.popupContainer .yui-tt-shadow-visible{opacity:.12;filter:alpha(opacity=12);}
+
+.popupContainer .yui-panel .bd li
+{
+    padding-bottom:			10px;
+}
+
+.popupContainer
+{
+    display:				none;
+}
+
+/* v1.2 */
+.fontTopCategories
+{
+    float:					right;
+    text-align:				right;
+    /*padding-right:                          14px;*/
+    color:                                  #888;
+}
+.fontTopCategories a
+{
+    color:                                  #888;
+    text-decoration:                        none;
+}
+.fontTopCategories a:hover
+{
+    color:                                  #888;
+    text-decoration:                        underline;
+}
+.fontTotalDownloads
+{
+    float:					right;
+    text-align:				right;
+}
+.inlinePageAds
+{
+    margin-left:                            auto;
+    margin-right:                           auto;
+    text-align:				center;
+	margin-top: 0;
+}
+
+div#demoBanner
+{ 
+    background-color: #333333; 
+    width: 100%; 
+    text-align: center;
+    padding: 7px; 
+    font-weight: bold;
+    color: #ffffff;
+    opacity:0.5;
+    filter:alpha(opacity=50); /* For IE8 and earlier */
+}
+
+div#demoBanner span
+{
+    cursor: pointer;
+}
+
+div#demoBanner a
+{
+    color: #ffffff;
+}
+
+div#demoBanner:hover
+{
+    opacity:1;
+    filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+/* V2.0 */
+.fontDesigner
+{
+    padding-bottom: 14px;
+}
+
+.fontDesigner table
+{
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+}
+
+.fontDesigner td
+{
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    padding: 7px;
+}
+
+.fontDesigner td:first-child
+{
+    background-color: #eeeeee;
+}
+
+.pageDetailsRight
+{
+    padding-top: 8px;
+    color: #222222;
+}
+
+.sortFilterForm
+{
+    padding: 0px 0px 16px 0px;
+}
+
+.sortFilterForm label
+{
+    display: block;
+    font-weight: bold;
+}
+
+.sortFilterForm .elementWrapper
+{
+    display: inline-block;
+    padding-right: 8px;
+}
+
+.sortFilterForm #customPreviewText
+{
+    width: 180px;
+}
+
+.navBarRightSearch form
+{
+    width: 160px;
+    display: inline;
+}
+
+.navBarRightSearch input[type=text]
+{
+    width: 110px;
+}
+
+.navBarRightSearch input[type=submit]
+{
+    background-color: #ffffff;
+    border: 1px solid #838283;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 1px 4px 1px 4px;
+    text-align: center;
+    color: #353435;
+    vertical-align: top;
+    height: 21px;
+}
+
+.mainNavBarInner .navBarRightSearch
+{
+    float:				right;
+    padding:				9px;
+    padding-left:			18px;
+    padding-right:			18px;
+}
+
+.mainNavBarInner .navBarRightSearch form
+{
+    color:				#000000;
+    font-weight: bold;
+}
+
+.footerSocial
+{
+    text-align:				center;
+    clear:                              both;
+    padding-bottom:                     12px;
+}
+
+.socialTop
+{
+    float: right;
+    padding-left: 10px;
+    width: 62px;
+    padding-top: 2px;
+}
+
+.searchCommercialForm
+{
+    display: inline;
+    margin-left: 4px;
+}
+
+.searchCommercialForm input
+{
+    width:					260px;
+}
+
+.searchCommercialForm input[type=submit]
+{
+    width:					80px;
+}
+
+.leftBarContentWrapper
+{
+    width: 160px;
+    padding-top: 16px;
+    padding-bottom: 5px;
+    font-size: 11px;
+}
+
+.leftBarContentWrapper .leftBarContent
+{
+    background-color: #efefef;
+    padding: 7px;
+}
+
+/*
+.leftBarContentWrapper .leftBarContent .statsTitle
+{
+    border: solid 1px #ccc;
+    background-color: #dddddd;
+    padding: 5px;
+}
+
+.leftBarContentWrapper .leftBarContent .statsMain table
+{
+    border-collapse: collapse;
+    border-right: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+}
+
+.leftBarContentWrapper .leftBarContent .statsMain table td
+{
+    padding: 5px;
+    border-bottom: solid 1px #ccc;
+}
+
+.leftBarContentWrapper .leftBarContent .stat
+{
+    font-weight: bold;
+    text-align: right;
+}
+*/
+
+.keywordCloudWrapper
+{
+    text-align:				center;
+    padding-top:			8px;
+    padding-bottom:			16px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.keywordCloudWrapper .keywordCloud .keyword
+{
+    margin-right: 6px;
+    display: inline-block;
+}
+
+.keywordCloudWrapper .keywordCloud .keyword a
+{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 3px 4px;
+    text-decoration: none;
+    color: #444;
+    line-height: 2.4em;
+}
+
+.keywordCloudWrapper .keywordCloud .keyword:last-child
+{
+    margin-right: 0px;
+}
+
+.keywordCloudWrapper .keywordCloud .keyword a:hover
+{
+    border: 1px solid #aaa;
+    color: #000;
+}
+
+.keywordCloudWrapper .keywordCloud .topSearches
+{
+    margin-right: 8px;
+    display: inline;
+    font-weight: bold;
+}
+
+.leftSectionPlaceHolder
+{
+    width: 173px;
+    display: block;
+}
+
+.headerPaging .pagingWrapper, .headerPaging .pagingLabelWrapper
+{
+    padding-top: 0px;
+    padding-bottom: 8px;
+}
+
+.pagingWrapper .pagingLinkLast
+{
+    margin-right: 0px;
+}
+
+.categoryWrapper
+{
+    border-collapse: collapse;
+    padding: 0px;
+    margin: 0px;
+}
+.categoryWrapper .firstCell
+{
+    width: 137px;
+}
+
+.designerBrowseWrapper .letterLink
+{
+    margin-bottom: 8px;
+    background-color: #000000;
+    color: #fff;
+    margin-right: 1px;
+    padding: 3px 6px;
+    border: 1px solid #000000;
+}
+
+.designerBrowseWrapper .letterLink:hover
+{
+    background-color: #fff;
+}
+
+.designerBrowseWrapper .letterLink a
+{
+    color: #fff;
+    font-weight: bold;
+}
+
+.designerBrowseWrapper .letterLink:hover a
+{
+    color: #000;
+    text-decoration: none;
+}
+
+.designerBrowseWrapper .letterSelected
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+
+.designerBrowseWrapper .letterSelected a
+{
+    color: #000000;
+    font-weight: bold;
+}
+
+.mainLogo
+{
+    float: left;
+    margin-top: 2px;
+    margin-left: 1px;
+}
+
+.footerAtoZ
+{
+    text-align:				center;
+    clear:                              both;
+    padding-bottom:                     12px;
+    margin-top: 14px;
+}
+
+.footerAtoZ .atozFooterTitle
+{
+    font-weight: bold;
+}
+
+.footerAtoZ a
+{
+    text-decoration: none;
+}
+
+.footerAtoZ a:hover
+{
+    text-decoration: underline;
+}
+
+.homeBottomTextInner
+{
+    border:			1px solid #000000;
+    padding:			12px;
+    background-color:		#eee;
+}
+
+.homeBottomTextInner p
+{
+    margin-top: 0px;
+}
+
+.homeBottomTextInner p:last-child
+{
+    margin-bottom: 0px;
+}
+
+.homePageFooterPaging
+{
+	padding-top: 5px;
+}
+
+.homePageFooterPaging .pagingWrapper
+{
+    padding-top: 0px;
+}
+
+.homePageFooterPaging .pagingLabelWrapper
+{
+    padding-top: 4px;
+}
+
+.categoryWrapper .socialButton
+{
+    margin-top: 89px;
+    float: left;
+    display: block;
+}
+
+.designerAdvertCode
+{
+    font-size: 11px;
+    color: #333;
+    text-align: center;
+    display: block;
+	margin-top: -2px;
+}
+
+.previewLicenceText
+{
+    float: right;
+    padding-right: 16px;
+    color: #575739;
+	text-align: right;
+}
+
+.bodyContainer
+{
+	width: 1040px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ffffff;
+	border-left: 1px solid #C6C6C6;
+	border-right: 1px solid #C6C6C6;
+}
+
+.fontListingList
+{
+	list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.fontListingList li
+{
+	margin-bottom: 36px;
+}
+
+.fontListingList li:last-child
+{
+	margin-bottom: 0px;
+}
+
+.link-selected
+{
+    text-decoration: none;
+}
